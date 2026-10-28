@@ -2,9 +2,9 @@ export const content = {
   name: "Juwita Aulia Salsabila",
   title: "Leader. Speaker. Changemaker.",
   subtitle:
-    "Mahasiswi yang berdedikasi dalam kepemimpinan, public speaking, dan pengembangan organisasi.",
+    "Wakil HMPTI & Wakil Ketua Rayon PMII yang berdedikasi dalam kepemimpinan, public speaking, dan pengembangan organisasi.",
   about: {
-    bio: "Halo! Saya Juwita Aulia Salsabila, seorang mahasiswi yang passionate dalam dunia kepemimpinan dan public speaking. Dengan pengalaman aktif di organisasi PMII (Pergerakan Mahasiswa Islam Indonesia) sebagai Wakil Ketua Rayon, saya telah mengembangkan kemampuan memimpin, berkomunikasi, dan menggerakkan orang untuk mencapai tujuan bersama.",
+    bio: "Halo! Saya Juwita Aulia Salsabila, seorang mahasiswi yang passionate dalam dunia kepemimpinan dan public speaking. Saat ini saya menjabat sebagai Wakil HMPTI serta Wakil Ketua Rayon PMII (Pergerakan Mahasiswa Islam Indonesia) Rayon Hasyim Asy'ari, memimpin dan menggerakkan anggota untuk tumbuh bersama.",
     bio2: "Saya percaya bahwa kepemimpinan sejati lahir dari keberanian untuk berbicara, kemampuan mendengar, dan tekad untuk terus belajar. Mari bersama-sama menciptakan perubahan yang bermakna.",
     quote:
       "Pemimpin yang baik bukan yang paling depan, tapi yang menggerakkan semua untuk maju bersama.",
@@ -19,39 +19,46 @@ export const content = {
   ],
   experiences: [
     {
-      year: "2023 – Sekarang",
+      year: "2026 – Sekarang",
       title: "Wakil Ketua Rayon",
       organization: "PMII Rayon Hasyim Asy'ari",
       description:
         "Memimpin dan mengkoordinasi kegiatan organisasi tingkat rayon, membina anggota, serta mewakili organisasi dalam berbagai forum dan kegiatan eksternal.",
     },
     {
-      year: "2023",
+      year: "2026 – Sekarang",
+      title: "Wakil HMPTI",
+      organization: "Himpunan Mahasiswa Informatika",
+      description:
+        "Menjabat sebagai Wakil Ketua Himpunan Mahasiswa, membantu memimpin kegiatan akademik dan non-akademik serta mendorong kolaborasi antar mahasiswa di lingkungan program studi.",
+    },
+    {
+      year: "2025",
       title: "Pembicara",
       organization: "Seminar Kepemimpinan Mahasiswa",
       description:
         "Berbagi pengalaman dan wawasan tentang kepemimpinan efektif di era digital kepada ratusan mahasiswa baru.",
     },
     {
-      year: "2022 – 2023",
+      year: "2024 – 2025",
       title: "Ketua Panitia",
       organization: "Orientasi Anggota Baru PMII",
       description:
         "Menginisiasi dan memimpin pelaksanaan kegiatan penerimaan dan pembinaan anggota baru dengan peserta lebih dari 200 mahasiswa.",
     },
     {
-      year: "2022",
+      year: "2025",
       title: "Moderator & MC",
-      organization: "Forum Diskusi Nasional",
+      organization: "Forum Diskusi Kampus",
       description:
-        "Memandu jalannya diskusi nasional bertema isu kepemudaan dan kebangsaan dengan narasumber dari berbagai institusi.",
+        "Memandu jalannya diskusi bertema isu kepemudaan dan kebangsaan dengan narasumber dari berbagai institusi.",
     },
     {
-      year: "2021 – 2022",
+      year: "2024 – Sekarang",
       title: "Anggota Aktif",
       organization: "PMII Rayon Hasyim Asy'ari",
       description:
-        "Aktif berpartisipasi dalam berbagai program kaderisasi, pelatihan kepemimpinan, dan kegiatan sosial kemasyarakatan.",
+        "Aktif berpartisipasi dalam berbagai program kaderisasi, pelatihan kepemimpinan, dan kegiatan sosial kemasyarakatan sejak bergabung di tahun 2024.",
     },
   ],
   organizations: [
@@ -59,18 +66,18 @@ export const content = {
       name: "PMII",
       fullName: "Pergerakan Mahasiswa Islam Indonesia",
       role: "Wakil Ketua Rayon Hasyim Asy'ari",
-      period: "2023 – Sekarang",
+      period: "2026 – Sekarang",
       description:
         "PMII adalah organisasi mahasiswa Islam terbesar di Indonesia yang berfokus pada pengembangan intelektual, spiritual, dan kepemimpinan mahasiswa Muslim Indonesia.",
       color: "#C9956C",
     },
     {
-      name: "BEM",
-      fullName: "Badan Eksekutif Mahasiswa",
-      role: "Anggota Divisi Komunikasi",
-      period: "2022 – 2023",
+      name: "HMPTI",
+      fullName: "Himpunan Mahasiswa Informatika",
+      role: "Wakil Ketua Himpunan",
+      period: "2026 – Sekarang",
       description:
-        "Terlibat aktif dalam kegiatan kemahasiswaan di tingkat fakultas, merancang program komunikasi dan hubungan publik organisasi.",
+        "Himpunan Mahasiswa yang bergerak aktif dalam pengembangan akademik, soft skill, dan jejaring mahasiswa program studi Informatika.",
       color: "#C9B8E8",
     },
   ],

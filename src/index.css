@@ -1,28 +1,34 @@
 /* =====================================================
-   CSS Variables & Global Reset
+   CSS Variables & Global Reset — Bold Pink Theme
    ===================================================== */
 :root {
-  --blush: #F7C5CC;
-  --lavender: #C9B8E8;
-  --rose-gold: #C9956C;
-  --cream: #FFF8F5;
-  --dark: #2D2D2D;
-  --white: #FFFFFF;
-  --text-muted: #7A7A7A;
+  --pink:        #FF2D78;   /* hot pink utama */
+  --pink-dark:   #D4005F;   /* hover / aksen gelap */
+  --pink-light:  #FF6BA8;   /* aksen terang */
+  --pink-pale:   #FFE0EC;   /* background lembut */
+  --pink-ultra:  #FFF0F6;   /* background section */
+  --white:       #FFFFFF;
+  --dark:        #1A0A12;   /* teks utama */
+  --text-muted:  #7D4B60;   /* teks sekunder */
+  --cream:       #FFF5F9;   /* body bg */
 
-  --gradient-blush-lavender: linear-gradient(135deg, #F7C5CC 0%, #C9B8E8 100%);
-  --gradient-rose-gold: linear-gradient(135deg, #C9956C 0%, #e8b89a 100%);
-  --gradient-hero: linear-gradient(135deg, #fce4e8 0%, #ede0f8 50%, #f7e6dd 100%);
-  --gradient-soft: linear-gradient(180deg, #FFF8F5 0%, #fce8ed 100%);
+  /* legacy aliases (dipakai komponen lama) */
+  --blush:       #FFB3CE;
+  --lavender:    #F7A8C4;
+  --rose-gold:   #FF2D78;
 
-  --shadow-sm: 0 2px 8px rgba(201, 149, 108, 0.12);
-  --shadow-md: 0 8px 32px rgba(201, 149, 108, 0.18);
-  --shadow-lg: 0 16px 48px rgba(201, 149, 108, 0.22);
-  --shadow-card: 0 4px 20px rgba(44, 44, 44, 0.08);
+  --gradient-hero:   linear-gradient(135deg, #FF2D78 0%, #ff6ba8 50%, #FFB3CE 100%);
+  --gradient-pink:   linear-gradient(135deg, #FF2D78 0%, #FF6BA8 100%);
+  --gradient-soft:   linear-gradient(180deg, #FFF5F9 0%, #FFE0EC 100%);
 
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --shadow-sm:   0 2px 8px rgba(255,45,120,0.15);
+  --shadow-md:   0 8px 32px rgba(255,45,120,0.22);
+  --shadow-lg:   0 16px 48px rgba(255,45,120,0.28);
+  --shadow-card: 0 4px 20px rgba(255,45,120,0.10);
+
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
   --radius-full: 9999px;
 
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -52,29 +58,20 @@ body {
 /* =====================================================
    Scrollbar
    ===================================================== */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--cream);
-}
-
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
 ::-webkit-scrollbar-thumb {
-  background: var(--rose-gold);
+  background: var(--pink);
   border-radius: var(--radius-full);
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #b8845b;
-}
+::-webkit-scrollbar-thumb:hover { background: var(--pink-dark); }
 
 /* =====================================================
    Selection
    ===================================================== */
 ::selection {
-  background-color: var(--blush);
-  color: var(--dark);
+  background-color: var(--pink-pale);
+  color: var(--pink-dark);
 }
 
 /* =====================================================
@@ -85,15 +82,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
 
 /* =====================================================
    Utility Classes
@@ -108,10 +98,9 @@ img {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
-  color: var(--rose-gold);
+  color: var(--pink);
   text-align: center;
   margin-bottom: 0.75rem;
-  position: relative;
 }
 
 .section-subtitle {
@@ -124,7 +113,7 @@ img {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #C9956C 0%, #C9B8E8 60%, #F7C5CC 100%);
+  background: var(--gradient-pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -138,25 +127,25 @@ img {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 2rem;
-  background: var(--rose-gold);
+  background: var(--pink);
   color: var(--white);
-  border: 2px solid var(--rose-gold);
+  border: 2px solid var(--pink);
   border-radius: var(--radius-full);
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
   letter-spacing: 0.02em;
-  text-decoration: none;
   white-space: nowrap;
+  box-shadow: 0 4px 18px rgba(255,45,120,0.35);
 }
 
 .btn-primary:hover {
-  background: #b8845b;
-  border-color: #b8845b;
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 28px rgba(255,45,120,0.45);
 }
 
 .btn-secondary {
@@ -165,21 +154,20 @@ img {
   gap: 0.5rem;
   padding: 0.75rem 2rem;
   background: transparent;
-  color: var(--rose-gold);
-  border: 2px solid var(--rose-gold);
+  color: var(--pink);
+  border: 2px solid var(--pink);
   border-radius: var(--radius-full);
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
   letter-spacing: 0.02em;
-  text-decoration: none;
   white-space: nowrap;
 }
 
 .btn-secondary:hover {
-  background: var(--rose-gold);
+  background: var(--pink);
   color: var(--white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
@@ -189,67 +177,55 @@ img {
    Animations
    ===================================================== */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-12px) rotate(2deg);
-  }
-  66% {
-    transform: translateY(-6px) rotate(-1deg);
-  }
+  0%,100% { transform: translateY(0px) rotate(0deg); }
+  33%      { transform: translateY(-14px) rotate(2deg); }
+  66%      { transform: translateY(-7px) rotate(-1deg); }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+@keyframes floatReverse {
+  0%,100% { transform: translateY(0px) rotate(0deg); }
+  33%      { transform: translateY(10px) rotate(-2deg); }
+  66%      { transform: translateY(5px) rotate(1deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 @keyframes pulse-soft {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
+  0%,100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.06); }
 }
 
 @keyframes scrollBounce {
-  0%, 100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(8px);
-    opacity: 0.5;
-  }
+  0%,100% { transform: translateX(-50%) translateY(0);   opacity: 1; }
+  50%      { transform: translateX(-50%) translateY(8px); opacity: 0.5; }
+}
+
+@keyframes sparkle {
+  0%,100% { opacity:0; transform: scale(0) rotate(0deg); }
+  50%      { opacity:1; transform: scale(1) rotate(180deg); }
+}
+
+@keyframes blob-move {
+  0%,100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50%      { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 }
 
 /* =====================================================
    Glassmorphism card
    ===================================================== */
 .glass-card {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(247, 197, 204, 0.3);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 45, 120, 0.15);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
 }
@@ -258,22 +234,8 @@ img {
    Responsive
    ===================================================== */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .section-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 0.65rem 1.5rem;
-    font-size: 0.9rem;
-  }
+  .container { padding: 0 1rem; }
+  .section-title { font-size: 1.8rem; }
+  .section-subtitle { font-size: 0.95rem; margin-bottom: 2rem; }
+  .btn-primary, .btn-secondary { padding: 0.65rem 1.5rem; font-size: 0.9rem; }
 }

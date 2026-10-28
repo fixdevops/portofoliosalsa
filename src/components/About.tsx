@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { content } from "../data/content";
+import profilePhoto from "/b417f46a-906e-4433-ba51-986151d61f94.jpg";
 
 const About: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
@@ -47,104 +48,58 @@ const About: React.FC = () => {
               gap: "1.5rem",
             }}
           >
-            {/* Decorative avatar circle */}
+            {/* Photo circle */}
             <div style={{ position: "relative" }}>
-              {/* Outer ring */}
+              {/* Outer dashed ring */}
               <div
                 style={{
                   position: "absolute",
                   inset: "-14px",
                   borderRadius: "50%",
-                  border: "2px dashed rgba(201,149,108,0.35)",
+                  border: "2px dashed rgba(201,149,108,0.4)",
                   animation: "float 8s ease-in-out infinite",
                 }}
               />
-              {/* Second ring */}
+              {/* Second soft ring */}
               <div
                 style={{
                   position: "absolute",
                   inset: "-28px",
                   borderRadius: "50%",
-                  border: "1.5px solid rgba(201,184,232,0.25)",
+                  border: "1.5px solid rgba(201,184,232,0.3)",
                 }}
               />
-              {/* Main circle */}
-              <svg
-                width="240"
-                height="240"
-                viewBox="0 0 240 240"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ display: "block" }}
-                aria-label="Foto profil Juwita Aulia Salsabila"
-                role="img"
-              >
-                <defs>
-                  <radialGradient id="avatarBg" cx="50%" cy="40%" r="55%">
-                    <stop offset="0%" stopColor="#F7C5CC" />
-                    <stop offset="60%" stopColor="#C9B8E8" />
-                    <stop offset="100%" stopColor="#C9956C" stopOpacity="0.6" />
-                  </radialGradient>
-                  <clipPath id="circleClip">
-                    <circle cx="120" cy="120" r="115" />
-                  </clipPath>
-                </defs>
-
-                {/* Background circle */}
-                <circle cx="120" cy="120" r="115" fill="url(#avatarBg)" />
-
-                {/* Stylized female silhouette */}
-                {/* Head */}
-                <circle cx="120" cy="88" r="30" fill="rgba(255,255,255,0.85)" />
-                {/* Neck */}
-                <rect x="113" y="116" width="14" height="16" rx="4" fill="rgba(255,255,255,0.85)" />
-                {/* Shoulders & body */}
-                <path
-                  d="M72 168 C72 140 90 132 120 132 C150 132 168 140 168 168 L168 200 L72 200 Z"
-                  fill="rgba(255,255,255,0.85)"
-                  clipPath="url(#circleClip)"
-                />
-                {/* Hair decorative element */}
-                <ellipse cx="120" cy="68" rx="33" ry="18" fill="rgba(201,149,108,0.55)" />
-                <path
-                  d="M87 68 C87 52 95 46 120 46 C145 46 153 52 153 68"
-                  fill="rgba(201,149,108,0.55)"
-                />
-
-                {/* Decorative floral border elements */}
-                {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
-                  const rad = (angle * Math.PI) / 180;
-                  const r = 108;
-                  const cx2 = 120 + r * Math.cos(rad);
-                  const cy2 = 120 + r * Math.sin(rad);
-                  return (
-                    <circle
-                      key={i}
-                      cx={cx2}
-                      cy={cy2}
-                      r="4"
-                      fill={i % 2 === 0 ? "rgba(247,197,204,0.8)" : "rgba(201,184,232,0.8)"}
-                    />
-                  );
-                })}
-
-                {/* Initials overlay */}
-                <text
-                  x="120"
-                  y="230"
-                  textAnchor="middle"
-                  fontFamily="'Playfair Display', serif"
-                  fontSize="11"
-                  fontWeight="600"
-                  fill="rgba(255,255,255,0.9)"
-                  letterSpacing="2"
-                >
-                  JAS
-                </text>
-              </svg>
+              {/* Rose gold glow behind photo */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: "-6px",
+                  borderRadius: "50%",
+                  background:
+                    "linear-gradient(135deg, rgba(247,197,204,0.6), rgba(201,184,232,0.5), rgba(201,149,108,0.4))",
+                  zIndex: 0,
+                }}
+              />
+              {/* Photo */}
+              <img
+                src={profilePhoto}
+                alt="Foto profil Juwita Aulia Salsabila"
+                style={{
+                  width: "240px",
+                  height: "240px",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  display: "block",
+                  position: "relative",
+                  zIndex: 1,
+                  border: "4px solid rgba(255,255,255,0.9)",
+                  boxShadow: "0 8px 32px rgba(201,149,108,0.25)",
+                }}
+              />
             </div>
 
-            {/* Stats cards below avatar */}
+            {/* Stats cards below photo */}
             <div
               style={{
                 display: "flex",
@@ -154,8 +109,8 @@ const About: React.FC = () => {
               }}
             >
               {[
-                { label: "Wakil Ketua Rayon", sub: "PMII 2023–Sekarang" },
-                { label: "Mahasiswi Aktif", sub: "Kepemimpinan" },
+                { label: "Wakil Ketua Rayon", sub: "PMII 2026–Sekarang" },
+                { label: "Wakil HMPTI", sub: "2026–Sekarang" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -323,10 +278,10 @@ const About: React.FC = () => {
             gap: 2.5rem !important;
           }
           .about-grid > div:first-child {
-            order: 1;
+            display: none !important;
           }
           .about-grid > div:last-child {
-            order: 2;
+            order: 1;
           }
         }
       `}</style>

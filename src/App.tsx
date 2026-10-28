@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
-import Organizations from "./components/Organizations";
+import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <About />
       <Skills />
       <Experience />
-      <Organizations />
+      <Certificates />
       <Contact />
       <Footer />
     </div>
